@@ -1,0 +1,27 @@
+using System;
+
+public class Formacao : PessoaFisica
+{
+    public string FormacaoAcademica { get; set; }
+    public string Cargo { get; set; }
+    public double Salario { get; set; }
+
+    public Formacao(string nome, int idade, string cpf, string formacao, string cargo, double salario)
+        : base(nome, idade, cpf)
+    {
+        FormacaoAcademica = formacao;
+        Cargo = cargo;
+        Salario = salario;
+    }
+
+    public void ListarProfessor()
+    {
+        Console.WriteLine("\nDados do Professor:");
+        Console.WriteLine("Nome: " + Nome);
+        Console.WriteLine("Idade: " + Idade);
+        Console.WriteLine("CPF: " + Cpf);
+        Console.WriteLine("Formação: " + FormacaoAcademica);
+        Console.WriteLine("Cargo: " + Cargo);
+        Console.WriteLine("Salário: R$ " + Salario);
+    }
+}

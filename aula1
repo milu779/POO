@@ -1,0 +1,53 @@
+using System;
+
+abstract class Forma
+{
+    public double Base { get; set; }
+    public double Altura { get; set; }
+
+    public Forma(double baseForma, double altura)
+    {
+        Base = baseForma;
+        Altura = altura;
+    }
+
+    public abstract double CalcularArea();
+}
+
+class Triangulo : Forma
+{
+    public Triangulo(double baseTriangulo, double altura) 
+        : base(baseTriangulo, altura)
+    {
+    }
+
+    public override double CalcularArea()
+    {
+        return (Base * Altura) / 2;
+    }
+}
+
+class Retangulo : Forma
+{
+    public Retangulo(double baseRetangulo, double altura) 
+        : base(baseRetangulo, altura)
+    {
+    }
+
+    public override double CalcularArea()
+    {
+        return Base * Altura;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Forma t = new Triangulo(10, 5);
+        Forma r = new Retangulo(10, 5);
+
+        Console.WriteLine("Área do Triângulo: " + t.CalcularArea());
+        Console.WriteLine("Área do Retângulo: " + r.CalcularArea());
+    }
+}

@@ -1,0 +1,23 @@
+using System;
+
+public class PessoaFisica
+{
+    public string Nome { get; set; }
+    public int Idade { get; set; }
+    public string Cpf { get; set; }
+
+    public PessoaFisica(string nome, int idade, string cpf)
+    {
+        Nome = nome;
+        Idade = idade;
+        Cpf = cpf;
+    }
+
+    public void ListarDados()
+    {
+        Console.WriteLine("Dados da Pessoa Física:");
+        Console.WriteLine("Nome: " + Nome);
+        Console.WriteLine("Idade: " + Idade);
+        Console.WriteLine("CPF: " + Cpf);
+    }
+}

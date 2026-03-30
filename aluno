@@ -1,0 +1,24 @@
+using System;
+
+public class Aluno : PessoaFisica
+{
+    public int Rm { get; set; }
+    public string Curso { get; set; }
+
+    public Aluno(string nome, int idade, string cpf, int rm, string curso)
+        : base(nome, idade, cpf)
+    {
+        Rm = rm;
+        Curso = curso;
+    }
+
+    public void ListarAluno()
+    {
+        Console.WriteLine("\nDados do Aluno:");
+        Console.WriteLine("Nome: " + Nome);
+        Console.WriteLine("Idade: " + Idade);
+        Console.WriteLine("CPF: " + Cpf);
+        Console.WriteLine("RM: " + Rm);
+        Console.WriteLine("Curso: " + Curso);
+    }
+}
